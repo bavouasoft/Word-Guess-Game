@@ -36,6 +36,7 @@ let rnd = pickrandom();
 let win = 0;
 let lost = 0;
 let leftguess = 9;
+let capture = "&";
 
 console.log("rand : " + rnd);
 
@@ -54,11 +55,20 @@ $(document).keypress(function(event) {
 update = function(capture) {
   if (capture === rnd) {
     win++;
-  } else {
-    lost++;
   }
   leftguess--;
 
+  let exit = leftguess === -1 || capture === rnd;
+  if (exit) {
+    if (leftguess === -1) {
+      lost++;
+    }
+
+    leftguess = 9;
+    $("#guesssofar").text("");
+    rnd = pickrandom();
+    console.log("rand : " + rnd);
+  }
   $("#win").text(win);
 
   $("#lost").text(lost);

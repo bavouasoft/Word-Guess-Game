@@ -1,41 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="us">
-<head>
-    
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-
-
-<div class="wrapper">
-    <header class="header">Word guess</header>
-    <article class="main">
-
+  <head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">Word guess</header>
+      <article class="main">
         <div class="area" id="area">
+          <table align="left">
+            <tr>
+              <td colspan="2">Guess what letter i'm thinking of</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>WIN:</td>
+              <td><div id="win" /></td>
+            </tr>
+            <tr>
+              <td>LOST:</td>
+              <td><div id="lost" /></td>
+            </tr>
+            <tr>
+              <td>Guesses left:</td>
+              <td><div id="guessleft" /></td>
+            </tr>
+            <tr>
+              <td>You guess so far:</td>
+              <td><div id="guesssofar" /></td>
+            </tr>
+          </table>
+        </div>
+      </article>
 
+      <footer class="footer">choose a letter</footer>
+    </div>
+  </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="assets/javascript/game.js"></script>
+</html>
+
+////////////////////////////////////////////////////////////
 
 <table align="left">
-<tr><td colspan="2">Guess what letter i'm thinking of<td></tr> 
-<tr><td>WIN:</td><td> <div id="win"/></td></tr> 
-<tr><td>LOST:</td><td> <div id="lost"/></td></tr> 
-<tr><td>Guesses left:</td><td> <div id="guessleft"/></td></tr> 
-<tr><td>You guess so far:</td><td> <div id="guesssofar"/></td></tr> 
+  <tr>
+    <td colspan="2">Guess what letter i'm thinking of</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>WIN:</td>
+    <td><div id="win" /></td>
+  </tr>
+  <tr>
+    <td>LOST:</td>
+    <td><div id="lost" /></td>
+  </tr>
+  <tr>
+    <td>Guesses left:</td>
+    <td><div id="guessleft" /></td>
+  </tr>
+  <tr>
+    <td>You guess so far:</td>
+    <td><div id="guesssofar" /></td>
+  </tr>
 </table>
- 
-
-        </div>
-
-
-    </article>
-
-    <footer class="footer">choose a letter</footer>
-</div>
-
-
-</body>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script src="assets/javascript/game.js"></script>
- 
